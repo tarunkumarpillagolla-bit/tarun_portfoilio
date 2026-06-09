@@ -1,6 +1,9 @@
 import type { NextConfig } from "next";
 
 const isGithubPages = process.env.GITHUB_PAGES === "true";
+
+// Must match site.repositoryName in src/data/portfolio.ts
+// Permanent URL: https://tarunkumarpillagolla-bit.github.io/tarun_portfoilio/
 const repositoryName = "tarun_portfoilio";
 const basePath = isGithubPages ? `/${repositoryName}` : "";
 

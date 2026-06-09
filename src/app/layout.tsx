@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { seo } from "@/data/portfolio";
+import { seo, site } from "@/data/portfolio";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,6 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(site.url),
   title: seo.title,
   description: seo.description,
   keywords: [
@@ -30,6 +31,7 @@ export const metadata: Metadata = {
     title: seo.title,
     description: seo.description,
     type: "website",
+    url: site.url,
   },
 };
 

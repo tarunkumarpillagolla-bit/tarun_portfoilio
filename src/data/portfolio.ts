@@ -1,3 +1,10 @@
+/** Permanent GitHub Pages URL — do not change repo name or username */
+export const site = {
+  url: "https://tarunkumarpillagolla-bit.github.io/tarun_portfoilio/",
+  githubUsername: "tarunkumarpillagolla-bit",
+  repositoryName: "tarun_portfoilio",
+} as const;
+
 export const colors = {
   primary: "#00FFB3",
   secondary: "#00D9FF",

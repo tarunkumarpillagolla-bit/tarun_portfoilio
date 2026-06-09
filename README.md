@@ -18,16 +18,19 @@ npm run build        # standard Next.js build
 npm run build:pages  # static export for GitHub Pages
 ```
 
+## Live site (permanent URL)
+
+**https://tarunkumarpillagolla-bit.github.io/tarun_portfoilio/**
+
+Every push to `main` redeploys to this same URL automatically.
+
 ## Deploy to GitHub Pages
 
 This project deploys automatically via GitHub Actions when you push to `main`.
 
-1. Create a public repo named `tarun_portfoilio` on GitHub
-2. Push this project to `main`
-3. In the repo go to **Settings → Pages → Build and deployment → Source** and select **GitHub Actions**
-4. After the workflow completes, the site will be live at:
-
-   `https://<your-username>.github.io/tarun_portfoilio/`
+- Repo: `tarunkumarpillagolla-bit/tarun_portfoilio`
+- Pages source: **GitHub Actions** (Settings → Pages)
+- Do **not** rename the repo or GitHub username, or the URL will change
 
 ## Customize
 
