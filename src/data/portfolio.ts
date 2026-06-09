@@ -147,6 +147,8 @@ export const interests = [
 export const resume = {
   file: "/resume.pdf",
   downloadName: "Tarunkumar_resume.pdf",
+  /** Bump this when you replace public/resume.pdf to bust CDN/browser cache */
+  version: "2026-06-09-v2",
 };
 
 export const contact = {

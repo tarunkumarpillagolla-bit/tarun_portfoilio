@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { Download, Check, Loader2 } from "lucide-react";
 import { downloadResume } from "@/lib/downloadResume";
 import { getAssetPath } from "@/lib/basePath";
+import { resume } from "@/data/portfolio";
 import { useMounted } from "@/hooks/useMounted";
 
 type Variant = "primary" | "secondary" | "outline" | "nav";
@@ -56,7 +57,11 @@ export default function ResumeDownloadButton({
       setTimeout(() => setStatus("idle"), 2500);
     } catch {
       setStatus("error");
-      window.open(getAssetPath("/resume.pdf"), "_blank", "noopener,noreferrer");
+      window.open(
+        `${getAssetPath(resume.file)}?v=${resume.version}`,
+        "_blank",
+        "noopener,noreferrer"
+      );
       setTimeout(() => setStatus("idle"), 2500);
     }
   };

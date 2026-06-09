@@ -2,7 +2,8 @@ import { resume } from "@/data/portfolio";
 import { getAssetPath } from "@/lib/basePath";
 
 export async function downloadResume(): Promise<void> {
-  const response = await fetch(getAssetPath(resume.file));
+  const resumeUrl = `${getAssetPath(resume.file)}?v=${resume.version}`;
+  const response = await fetch(resumeUrl, { cache: "no-store" });
 
   if (!response.ok) {
     throw new Error("Resume file not found. Please add your PDF to the public folder.");
